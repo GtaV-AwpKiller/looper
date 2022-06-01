@@ -1,0 +1,1151 @@
+@import "_unstyle"
+
+$letsp: 2px;
+$txt-sd: -1px -1px 0 #000, 0   -1px 0 #000, 1px -1px 0 #000, 1px  0   0 #000, 1px  1px 0 #000, 0    1px 0 #000,-1px  1px 0 #000,-1px  0   0 #000;
+$drop-sd: drop-shadow(0 4px 4px rgba(0, 0, 0, .4));
+
+html,body
+    height: 100%
+    line-height: 1
+    font-family: 'M PLUS 1p', sans-serif
+
+.wrapper 
+    min-height: 100%
+    overflow: hidden
+    display: flex
+    flex-direction: column
+
+._container
+    max-width: 1148px
+    margin: 0px auto
+    box-sizing: content-box
+
+.header 
+    animation: headeranim 4s ease-in-out forwards 0s
+    position: absolute
+    width: 100%
+    left: 0
+    top: 0
+    z-index: 50
+    
+.header__menu
+    margin-left: calc( 164 / 1148 * 100% )
+    //margin-left: 164px
+
+.header 
+		&__container 
+            letter-spacing: $letsp
+            display: flex
+            min-height: 159px
+            align-items: center
+            justify-content: space-between
+		
+		&__logo 
+            font-weight: 900
+            font-size: 24px
+            color: white
+            text-shadow: $txt-sd
+
+
+.menu__item:not(:last-child)
+    //margin-right: calc( 54 / 405 * 100% )
+    margin: 0 54px 0 0
+
+.menu 
+
+		&__list 
+            display: flex
+            flex-wrap: wrap;
+
+		&__item
+            font-weight: 700
+            transition: 0.3s
+            opacity: .80
+            font-size: 1rem
+            &:hover
+                opacity: 1
+                filter: $drop-sd
+		&__link
+            color: white
+
+.header__burger
+    margin-left: calc( 80 / 1148 * 100% )
+    //margin-left: 100px
+
+.header__phone
+    font-size: 0.9rem
+    font-weight: 700
+    opacity: 1
+    margin-left: calc( 60  / 1148 * 100% )
+    //margin-left: 100px
+.menu__phone
+    cursor: pointer
+.menu__phone img
+    vertical-align: middle
+    padding-right: 18px 
+
+
+.item__phone
+    opacity: 1
+.header__burger
+
+@keyframes headeranim
+    from
+        top: -100%
+    to 
+        top: 0%
+
+@media (max-width: 1024px) 
+    .header__menu
+        margin-left: calc( 80 / 1148 * 100%);
+    .header__phone
+        margin-left: calc( 55 / 1148 * 100%);
+
+@media (max-width: 990px)
+     .header__phone
+        display: none  
+
+@media (max-width: 425px) 
+    .header__menu
+        text-align: center;
+        //margin: auto 35px;
+    .menu__item:not(:last-child)
+        margin-right: 10px;
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.main
+    flex: 1 1 auto
+
+.page 
+	&_main-block 
+        background: #321153
+        position: relative
+        height: 100%
+
+.main-block__container
+    width: 100%
+    height: 100%
+
+.main-block 
+    left: 0
+    top: 0
+
+.main-block 
+
+		&__body 
+            display: grid
+            grid-template-columns: 3fr 1fr
+            grid-template-areas: "a c" "b c"
+
+            padding: 220px 0 0 0
+            position: relative
+            z-index: 2
+            max-width: 100%
+            filter: $drop-sd
+            
+		&__text 
+            animation: subtext 3s ease-in-out 0s
+
+            grid-area: b
+            
+            color: white
+            font-size: calc( 49px + 50 * (100vw / 1920))
+            //font-size: 99px
+            font-weight: 900
+            line-height: calc(118 / 99 * 100%)
+            
+            filter: $drop-sd
+            text-shadow: $txt-sd
+
+            span
+                color: #F61067
+                animation: subtext 3s ease-in-out 0s
+            p
+                animation: title 3s ease-in-out 0s
+                
+.main_block 
+
+		&__title 
+            animation: wwd 1.5s ease-in-out 0s
+
+            grid-area: a
+
+            text-transform: uppercase
+            letter-spacing: 4px
+            font-weight: 700
+            color: white
+            line-height: calc(29 / 14.4 * 100%)
+            margin-bottom: 44px
+
+.second_block__scroll  
+    animation: scroll 3.8s ease-in-out 0s
+
+    display: grid
+    
+    grid-area: c
+    align-self: center
+    justify-self: end
+    justify-content: end
+    align-items: end
+    align-content: end
+
+    color: white
+    text-transform: uppercase
+    font-size: 12.8px
+    font-weight: 800
+
+    padding: 5px
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(135deg, #F61067 0%, #F61067 50%, transparent 50%);
+    background-size: 100% 0;
+    -webkit-background-size: 100% 0;
+    border-radius: 50px
+
+    letter-spacing: 7px
+    filter: $drop-sd
+    text-shadow: $txt-sd
+    transition: 2s
+
+    //text-shadow: $txt-sd
+    //filter: $drop-sd
+//
+    //-webkit-font-smoothing: antialiased
+.second_block__scroll:hover
+    background-size: 250% 250%;
+    -webkit-background-size: 250% 250%;
+    transition: 2s
+._rotate
+        justify-self: center
+        writing-mode: tb-rl
+
+.second_block__scroll__border
+    border-radius: 50px
+    border: 1px solid white
+    
+    margin-top: 42px
+    width: 21px
+    height: 45px 
+    display: flex
+    align-items: center
+    cursor: pointer
+
+.second_block__scroll__arrow
+
+        display: flex
+        align-items: center
+        margin: auto 0
+        color: white
+
+.main-block 
+
+		&__2container 
+            max-width: calc( 1046 / 1903 * 100% )
+            //height: calc( 107 / 895 * 100% )
+            //max-width: 1046px
+            height: 107px;
+            opacity: 0
+            animation: borderanim 1s ease-in-out 2s forwards
+            position: relative
+            z-index: 2
+            //max-width: 1066px
+            margin-left: 14px 
+            padding: 78px 0 126px 0
+            //padding: 0 600px 126px 0
+
+		&__border 
+            width: 100%
+            height: 100%
+            //margin-top: 42px
+            border: 2.5px solid rgba(255, 255, 255, 0.25)
+            //height: 107px
+            display: flex
+            align-items: center
+            
+
+.main-block__arrow__border	
+    margin-left: auto
+    width: 48px
+    height: 48px
+    border: 1px solid white
+    border-radius: 50px
+    display: flex
+    align-items: center
+    opacity: 1
+    margin-right: calc( 40 / 1051 * 100% )
+    //margin-right: 40px
+    box-shadow: 1px -1px 0px 200px rgba(255,255,255,.1) inset
+    cursor: pointer
+
+    box-shadow: inset 0 0 0 0 #f61067
+    transition: ease-in-out .5s
+    &:hover
+        box-shadow: inset 200px 0 0 0 #f61067
+        color: black
+        
+    &-arrow
+        opacity: 1
+        margin: 0 auto
+        color: white
+        user-select: none
+
+
+._ibg
+    position: relative
+ 
+._ibg img 
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    object-fit: cover
+    object-position: center
+
+.main-block__image
+    animation: imageanim 1s ease-in-out 2s forwards
+    width: 0%
+    //width: 100%
+
+    position: absolute
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 1
+    //&__cover  
+    //    animation: imageanim 1s ease-in-out 2s forwards
+    //    position: relative
+    //    width: 0%
+    //    height: 100%
+    //    //background: black
+    //    background: no-repeat url(../../img/5.png)
+    //    z-index: 2
+@media (max-width:425px)
+    .main-block__2container
+        max-width: 64%
+        padding: 24px 0 126px 0;
+        height: 67px
+        margin-left: 0px
+    .main-block__arrow__border
+        width: 36px
+        height: 36px
+@media (max-width:375px)
+    .main-block__2container
+        max-width: 70%
+
+@keyframes imageanim
+    from
+        width: 0%
+    to
+        width: 100%
+        
+@keyframes borderanim
+    from
+        opacity: 0
+        width: 0%
+    to
+        width: 100%
+        opacity: 1
+        
+    //from 
+    //    transform: translateX(-400%)
+    //to 
+    //    transform: translateX(0%)
+        
+@keyframes wwd
+    from 
+        transform: translateX(-300%)
+    to 
+        transform: translateX(0%)
+
+@keyframes title
+    from 
+        transform: translateX(-400%)
+    to 
+        transform: translateX(0%)
+
+@keyframes subtext
+    from 
+        transform: translateX(-900%)
+    to 
+        transform: translateX(0%)
+
+@keyframes scroll
+    from
+        transform: translateY(-900%)
+    to 
+        transform: translateY(0%)
+        
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+.page-content 
+    padding: 150px 0
+    width: 100%
+    height: 100%
+    position: relative
+    max-width: 1163px;
+
+    display: grid
+    //grid-gap: 10.7%;
+    grid-template-columns: .8fr 1fr
+    
+.page-content 
+
+		&__column:not(:last-child)
+            //padding-right: 124px
+
+		&__body 
+            width: 78.79%
+            &__intro
+                color: #F61067
+                letter-spacing: 6px
+                text-transform: uppercase
+                font-size: 12.6px
+                line-height: calc(26.2 / 12.6 * 100%)
+                font-weight: 800
+            &__title
+                padding: 18px 0 23px 0
+                font-size: 45px
+                line-height: calc(66.83 / 45 * 100%)
+                font-weight: 500
+                color: #30233D
+                text-shadow: $txt-sd
+                filter: $drop-sd
+                &_text
+                    font-size: 18px
+                    line-height: calc(29.4 / 18 * 100%)
+                    font-weight: 800
+                    color: #30233D
+                    //text-shadow: $txt-sd
+                    filter: $drop-sd
+                    padding-bottom: 36px
+            &__text
+                font-weight: 400
+                line-height: calc(29 / 18 * 100%)
+                color: #776C82
+
+            &__learnMore
+                margin-top: 16px
+                width: 177.19px
+                height: 45px
+                background-color: #F61067
+                color: white
+                font-size: 13.5px
+                font-weight: 500
+                letter-spacing: 2px
+                line-height: calc(20 / 18 * 100%)
+                border-radius: 36px
+                text-transform: uppercase
+
+                box-shadow: inset 0 0 0 0 white
+                transition: ease-in-out .5s
+                &:hover
+                    box-shadow: inset 200px 0 0 0 black
+                    color: white
+.page-content__column2__container
+    max-width: 100%
+    max-height: 100%
+    position: relative
+    display: grid
+
+.page-content 
+		&__column 
+            max-width: 634px;
+            max-height: 774px;
+		&__image 
+            margin-top: 4.65%
+            //margin-top: 36px
+            position: relative
+            z-index: 0
+            width: 65.29%
+            //width: 414px
+            height: 95.34%
+            //height: 738px
+            & img 
+                width: 100%
+                height: 100%
+		
+		&__bgblock 
+            margin-left: auto
+            position: absolute
+            width: 62.61%
+            //max-width: 396.66px
+            height: 69.76%
+            //height: 540px
+            background-color: #30124E
+            z-index: -1
+		
+		&__coverblock 
+            position: relative
+            margin-left: auto
+            align-self: flex-end
+            position: absolute
+            width: 53.47%
+            //width: 339.1px
+            height: 65.11%
+            //height: 504px
+            background-color:#3A0475
+            z-index: 1
+            right: 10.88%
+            //right: 69px //отступ разделить на ширину блока * 100
+            bottom: 3.35%
+            //bottom: 26px
+            &__text
+                position: relative
+                display: flex
+                bottom: 45%;
+                //margin-top: -223px
+                margin-left: 36.28%
+                //margin-left: 112px
+                //border: 1px solid white
+                flex-direction: column
+                width: 69.02%
+                //height: 100%
+                & p
+                    font-family: Noticia Text
+                    font-weight: 400
+                    font-style: italic
+                    font-size: 25px
+                    //font-size: calc( 17px + 8 * (100vw / 1440))
+                    //font-size: 1.6em
+                    line-height: calc(40 / 22.5 * 100%)
+                    color: white
+                    //&:nth-child(1n)
+                    //    transform: rotate(180deg)    
+                & .staples1
+                    margin-left: -20%;
+                    //font-size: calc( 100px + 44 * (100vw / 1148))
+                    font-size: 144px
+                    font-style: italic
+                    font-weight: 700
+                    line-height: calc(216 / 144 * 100%)
+                    align-self: center
+
+                & .staples2
+                    margin-left: -20%;
+                    font-size: 144px
+                    font-style: italic
+                    font-weight: 700
+                    line-height: calc(216 / 144 * 100%)
+                    align-self: center
+
+@media (max-width:1024px)
+    .page-content__coverblock__text
+        & p
+            font-size: calc( 17px + 6 * (100vw / 1440))
+            //font-size: 23px
+        & .staples1
+            font-size: calc( 98px + 48 * (100vw / 1440))
+            //font-size: 132px
+        & .staples2
+            font-size: calc( 98px + 48 * (100vw / 1440))
+            //font-size: 132px
+
+@media (max-width:768px) 
+    .page-content__coverblock__text
+        & p
+            font-size: 17px
+        & .staples1
+            font-size: 98px
+        & .staples2
+            font-size: 98px
+
+@media (max-width:760px) 
+    .page-content__column2__container
+        display: none
+    .page-content
+        display: flex
+        flex-direction: column
+    .page-content__body
+        text-align: center
+        width: 100%
+
+@media (max-width:425px) 
+    //.page-content
+    //    display: flex
+    //    flex-direction: column
+    //.page-content__body
+    //    text-align: center
+    //    width: 100%
+    //.page-content__column2__container
+    //    display: none
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.page-content 
+		&__our 
+            background-color: #150433
+            padding: 326px 0
+            transition-duration: 1s
+            &__container
+                display: flex;
+                flex-direction: column;
+            &__button
+                align-self: center
+                //margin-top: 16px
+                width: 199.46px
+                height: 45px
+                background-color: #F61067
+                color: white
+                font-size: 13.5px
+                font-weight: 500
+                letter-spacing: 2px
+                line-height: calc(20 / 18 * 100%)
+                border-radius: 36px
+                text-transform: uppercase
+                cursor: pointer
+
+                box-shadow: inset 0 0 0 0 white
+                transition: ease-in-out .5s
+                &:hover
+                    box-shadow: inset 0 0 0 50px white
+                    transform: 60deg
+                    color: black
+
+                
+            &__block__title
+                margin: 0 auto
+                width: 49.21%;
+                //width: 564px
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center;
+            &__title
+                text-align: center
+                padding: 19px 0
+                line-height: calc(66.83 / 45 * 100%)
+                font-weight: 500
+                color: white
+                font-size: calc( 41px + 4 * (100vw / 1920));
+                //font-size: 45px
+            &__title_text
+                line-height: calc(30 / 18 * 100%)
+                font-weight: 800
+                color: white
+                //font-size: 18px
+                font-size: calc( 14px + 4 * (100vw / 1196))
+                text-align: center
+		&__body 
+            transition-duration: 1s
+
+.page-content 
+		&__our 
+            &__block__content
+                justify-content: center;
+
+                padding: 59px 0 87px 0
+                display: grid;
+                //grid-template-columns: repeat(3,1fr);
+                grid-template-columns: repeat(auto-fill, 315px);
+                gap: 74px 100px;
+            &__blocks
+                //margin: 30px 0 
+                //width: 322px
+                color: white
+
+
+                //padding: 25px
+                //border: 2px solid rgb(18, 4, 43)
+                //box-shadow: 2px 4px 0px rgb(18, 4, 43)
+                //border-radius: 20px
+                //&:hover
+                //    //border: 2px solid rgb(18, 4, 43)
+                //    //box-shadow: 2px 4px 0px #000000
+                //    //transform: translateY(-5px)
+                //    
+                //    border: 2px solid rgb(18, 4, 43)
+                //    box-shadow: 2px 4px 0px #000000
+                //    transform: translateY(4px) 
+
+
+.page-content__our__blocks:hover .imghover1
+        //animation: circleanim 2s ease-in-out 0s infinite forwards
+        transform: translateY(-20px) rotate(360deg) 
+        transition: 1s
+        background-color: #00F0B5
+.page-content__our__blocks:hover .imghover2
+        //animation: circleanim 2s ease-in-out 0s infinite forwards
+        transform: translateY(-20px) rotate(360deg) 
+        transition: 1s
+        background-color: #F61067
+.page-content__our__blocks:hover .imghover3
+        //animation: circleanim 2s ease-in-out 0s infinite forwards
+        transform: translateY(-20px) rotate(360deg) 
+        transition: 1s
+        background-color: #F67110
+
+.blocks 
+    
+		&__img 
+            transition-duration: 1s
+            padding: 0 0 18px 0
+            width: 73px      
+            &__border
+                transition: 1s
+                display: flex
+                width: 72px
+                height: 72px
+                border: 1px solid rgba(255, 255, 255, .10)
+                border-radius: 50px
+                align-items: center;
+                //&:hover
+                //    //animation: circleanim 2s ease-in-out 0s infinite forwards
+                //    transform: translateY(-20px) rotate(360deg) 
+                //    transition: 1s
+                //    background-color: #00F0B5
+            & img
+                margin: 0 auto
+		&__Webdesign 
+			&_title 
+                font-size: 18px
+                line-height: calc(26.73 / 18 * 100%)
+                font-weight: 500
+                color: #00F0B5
+			
+		&__text 
+            padding: 1.5rem 0 0 0
+            font-size: 0.9rem
+            line-height: calc(26.46 / 16.2 * 100%)
+            font-weight: 400
+
+		&__Webdev 
+			&_title 
+                font-size: 18px
+                line-height: calc(26.73 / 18 * 100%)
+                font-weight: 500
+                color: #F61067
+
+		&__Marketing 
+			&_title 
+                font-size: 18px
+                line-height: calc(26.73 / 18 * 100%)
+                font-weight: 500
+                color: #F67110
+
+@media (max-width: 1144px) 
+    .page-content__our__block__content
+        text-align: center
+    .blocks__img
+        margin: auto
+
+@media (max-width: 375px) 
+    .page-content__our__block__title
+        width: 90%
+    .page-content__our__block__content
+        text-align: center
+    .blocks__img
+        margin: auto
+
+@media (max-width: 425px)
+    .blocks__img
+        margin: auto
+    .page-content__our__block__content
+        text-align: center
+    .page-content__our__block__title
+        width: 80%
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+.page-content__faces
+    width: 1263px
+    height: 349px
+.page-content 
+		&__testimonials 
+            position: relative
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: #FCFCFC
+		&__faces__container
+            position: relative
+            width: 100%
+            height: 100%
+            //margin: auto
+            .face
+                //h: 348
+                //w: 1263 ширину элемента на блок и умножить на 100
+                position: absolute
+                & img
+                    width: 100%
+                    height: 100%
+            .face:nth-child(7)
+                width: 6%;
+                height: 21%;
+                bottom: 0;
+            .face:nth-child(1)
+                width: 8%;
+                height: 30%;
+                left: 9%;
+                top: 17.7%;
+            .face:nth-child(2)
+                width: 5%;
+                height: 18%;
+                left: 22.72%;
+                top: 56%;
+                
+
+            .face:nth-child(3)
+                width: 6%;
+                height: 23%;
+                left: calc( 885 / 1263 * 100% )
+                top: 54%;
+            .face:nth-child(4)
+                width: 4.4%;
+                height: 16%;
+                left: calc( 1024 / 1263 * 100% )
+                top: 31%;
+            .face:nth-child(5)
+                width: 7%;
+                height: 26%;
+                left: calc( 1170 / 1263 * 100% )
+            .face:nth-child(6)
+                width: 5.7%;
+                height: 20.9%;
+                left: calc( 1170 / 1263 * 100% )
+                top: 63%;
+                
+
+		&__text 
+            margin: 0 auto
+            text-align: center
+            width: calc( 763 / 1157 * 100% )
+            //width: 763px
+            font-family: 'Noticia Text'
+            font-weight: 400
+            font-size: calc( 13px + 23 * (100vw / 1920));
+            //font-size: 36px
+            font-style: italic
+            line-height: calc(63.87 / 36 * 100%)
+            color: #30233D
+
+
+            &__sub
+                padding: 30px 0 0 0
+                text-align: center
+                font-weight: 400
+                font-size: calc( 14px + 4 * (100vw / 1196))
+                //font-size: 18px
+                color: #30233D
+                line-height: calc(29 / 18 * 100%)
+                padding-bottom: 149px
+                & span
+                    color: #F61067
+                    font-weight: 800;
+
+            &__container
+
+                &__slider
+                    //margin-top: 68px;
+                    display: flex
+                    align-items: center
+
+                    &__arrow-left
+                        //w 1157 h 128  tw 763
+                        display: flex
+                        width: calc( 36 / 1157 * 100% )
+                        padding: .8% 0;
+                        //height: calc( 36 / 128 * 100% )
+                        //width: 36px
+                        //height: 36px
+                        margin-right: auto
+                        align-items: center
+                        border-radius: 50px
+                        border: 1px solid #F61067
+                        background-color: #ffffff
+                        color: white
+                        cursor: pointer
+                        color: #F61067
+                        transition: ease-in-out .2s
+                        box-shadow: inset 0 0 0 0 white
+                        & p
+                            margin: 0 auto
+                        &:hover
+                            box-shadow: inset 50px 0 0 0 #F61067
+                            color: white
+
+                    &__arrow-right
+                        display: flex
+                        width: calc( 36 / 1157 * 100% )
+                        padding: .8% 0;
+                        //width: 36px
+                        //height: 36px
+                        margin-left: auto
+                        align-items: center
+                        border: 1px solid #F61067
+                        border-radius: 50px
+                        background-color: #ffffff
+                        color: white
+                        cursor: pointer
+                        color: #F61067
+                        transition: ease-in-out .2s
+                        box-shadow: inset 0 0 0 0 white
+                        & p
+                            margin: 0 auto
+                        &:hover
+                            box-shadow: inset 50px 0 0 0 #F61067
+                            color: white
+
+.page-content__main__face
+    transform: translateY(-26%);
+.main__face
+    width: calc(465/1148*100%)
+    //height: calc(460/349*100%)
+    margin: 0 auto;
+    & img 
+        width: 100%
+        height: 100%
+.main__face__bottom
+    width: calc(93/1148*100%)
+    //height: calc(80/349*100%)
+    margin: -3% auto 0 auto;
+    & img 
+        width: 100%
+        height: 100%
+
+@media (max-width: 768px) 
+    .main__face
+        width: calc(600/1148*100%)
+    .main__face__bottom 
+        width: calc(120/1148*100%)
+    .page-content__text__container__slider__arrow-left
+        width: 32px;
+        height: 20px
+    .page-content__text__container__slider__arrow-right
+        width: 32px;
+        height: 20px
+
+@media (max-width: 425px) 
+    
+    .main__face
+        width: calc(850/1148*100%)
+    .main__face__bottom 
+        width: calc(180/1148*100%)
+        margin: -5% auto 0 auto;
+    .page-content__text__container__slider__arrow-left
+        width: 26px;
+        height: 20px
+    .page-content__text__container__slider__arrow-right
+        width: 26px;
+        height: 20px
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+.page-content 
+		&__newsletter 
+            position: relative
+            padding: 81px 0 137px 0
+            max-width: 613px;
+            &__title
+                text-align: center;
+                font-weight: 500
+                font-size: calc( 19px + 23 * (100vw / 1920))
+                //font-size: 45px
+                line-height: calc(67 / 45 * 100%)
+                color: #30233D  
+                &__sub
+                    padding-top: 23px
+                    text-align: center
+                    font-weight: 500
+                    font-size: calc( 14px + 4 * (100vw / 1920))
+                    //font-size: 18px
+                    line-height: calc(27 / 18 * 100%)
+                    color: #776C82
+            &__form
+                display: flex
+                justify-content: space-between;
+                padding: 63px 0 0 0;
+                margin: 0 46px
+                align-items: center;
+                border-bottom: 3px solid #F4F4ED;
+                flex-wrap: wrap;
+                //justify-content: space-around;
+		&__email 
+            text-transform: uppercase
+            font-weight: 800
+            font-size: 18px
+            letter-spacing: 4px
+            line-height: calc(37 / 18 * 100%)
+            color: #9B94A3
+
+		&__button 
+            cursor: pointer
+            text-transform: uppercase
+            display: flex
+            font-weight: 800
+            font-size: 12.6px
+            letter-spacing: 6px
+            line-height: calc(26 / 12.2 * 100%)
+            color: #F61067
+            width: 226px
+            height: 54px
+            align-items: center;
+            background: linear-gradient(0deg, rgba(242, 242, 242, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+            & p
+                padding: 0 20px 0 28px;
+            &__arrow
+                display: flex
+                width: 27px
+                height: 27px
+                margin-right: auto
+                align-items: center
+                border: 1px solid #f6106885
+                border-radius: 50px
+                color: white
+                cursor: pointer
+                & svg
+                    fill: #F61067
+                    margin: 0 auto
+
+@media (max-width: 514px) 
+    .page-content__newsletter__form
+        justify-content: space-around
+        border-bottom: none
+    .page-content__email
+        text-align: center
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+.footer 
+    background-color: #150433
+    color: white
+    padding-top: 126px
+    &__bottom__text
+        margin-left: calc( 288 / 1148 * 100%)
+        padding-top: 8%;
+        padding-bottom: 14%;
+        //w 64 h 124
+        //margin-left: 294px
+        //padding-top: 64px
+        font-size: 12px
+        font-weight: 400
+        line-height: calc( 19 / 12 * 100% )
+
+.footer-container__container
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr 1fr;
+
+.footer-container 
+
+		&__logo 
+            //width: 166px
+            //padding-right: 128px
+            & a
+                font-size: 24px
+                font-weight: 900
+                line-height: calc(43 / 24 * 100%)
+            & p 
+                width: 166px;
+                padding-top: 25px
+                font-size: 16.2px
+                line-height: calc(43 / 24 * 100%)
+
+
+		&__menu 
+            width: 62px
+            //padding-right: 64px
+            & p 
+                line-height: calc(26 / 13 * 100%)
+                letter-spacing: 6px
+                font-weight: 800
+                font-size: 12.6px
+                border-bottom: 1px solid #F61067
+                margin-bottom: 27px
+
+		&__services 
+            width: 110px
+            //padding-right: 86px
+            & p 
+                line-height: calc(26 / 13 * 100%)
+                letter-spacing: 6px
+                font-weight: 800
+                font-size: 12.6px
+                border-bottom: 1px solid #F61067
+                margin-bottom: 27px
+
+		&__contact 
+            width: 166px
+            //padding-right: 128px
+            & p 
+                line-height: calc(26 / 13 * 100%)
+                letter-spacing: 6px
+                font-weight: 800
+                font-size: 12.6px
+                border-bottom: 1px solid #F61067
+                margin-bottom: 27px
+            
+		&__follow 
+            width: 264px
+            & p 
+                width: 45%;
+                line-height: calc(26 / 13 * 100%)
+                letter-spacing: 6px
+                font-weight: 800
+                font-size: 12.6px
+                border-bottom: 1px solid #F61067
+                margin-bottom: 27px
+
+		&__menu 
+            &__list__follow
+                display: flex;
+                flex-direction: row;
+
+.__menu__item
+    font-size: 12.6px
+    font-weight: 700
+    line-height: calc(28 / 13 * 100%)
+    color: #FCFCFC
+    letter-spacing: 1px
+.footer-container__menu__list__menu__item
+    cursor: pointer
+.footer-container__menu__list__menu__item:not(:last-child)
+    margin-right: calc( 42 / 264 * 100% )
+    //margin-right: 42px
+
+@media (max-width:1024px) 
+    .footer-container__container 
+        grid-template-columns: repeat(2,0fr);
+        row-gap: 42px;
+        justify-content: center;
+    .footer__bottom__text
+        text-align: center
+        margin-left: 0
+
+@media (max-width:425px) 
+    .footer-container__container 
+        justify-content: start
+
+@media (max-width:375px) 
+    .footer-container__container 
+        grid-template-columns: repeat(1,0fr);
+        justify-content: center;
+        justify-items: center;
+        text-align: center
+    .footer-container__follow
+        & p 
+            width: 100%
